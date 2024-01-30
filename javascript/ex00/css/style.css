@@ -1,0 +1,14 @@
+header{
+    background-color: coral;
+    margin-inline: 10%;
+}
+
+main{
+    background-color: lightpink;
+    margin-inline: 10%;
+}
+
+footer{
+    background-color:darksalmon;
+    margin-inline: 10%;
+}
