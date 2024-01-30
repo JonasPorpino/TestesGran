@@ -14,8 +14,8 @@ for(i in carros)[
 
 document.write('<p></p>')
 
-carros.push('fiesta') // adicionar ao arrey no final
-carros.unshift('palio') // adiciona ao arrey no inicio
+carros.push('fiesta') // adicionar ao array no final
+carros.unshift('palio') // adiciona ao array no inicio
 
 for(i in carros)[
     document.write(carros[i]+'<br>')
