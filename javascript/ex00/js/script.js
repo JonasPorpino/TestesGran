@@ -1,43 +1,37 @@
-function somar(){
-    let n1 = Number(document.getElementById('numero1').value)
-    let n2 = Number(document.getElementById('numero2').value)
+function calcular(operacao){
+    const n1 = Number(document.getElementById('numero1').value)
+    const n2 = Number(document.getElementById('numero2').value)
 
-    soma = n1 + n2
-
-    const resultado = document.getElementById('resultado')
-    
-    resultado.innerHTML=" igual à "+ soma
+    let resultado
+    switch (operacao) {
+        case '+': resultado = somar(n1,n2); break;
+        case '-': resultado = subtrair(n1,n2); break;
+        case '*': resultado = dividir(n1,n2); break;
+        case '/': resultado = somar(n1,n2); break;
+    }
+    document.getElementById('resultado').innerHTML = 'o resultado é '+ resultado
 }
 
-function subtrair(){
-    let n1 = Number(document.getElementById('numero1').value)
-    let n2 = Number(document.getElementById('numero2').value)
 
-    sub = n1 - n2
-
-    const resultado = document.getElementById('resultado')
-    
-    resultado.innerHTML=" igual à "+sub
+function somar(n1,n2){
+   return Number(n1) + Number(n2)
 }
 
-function vezes(){
-    let n1 = Number(document.getElementById('numero1').value)
-    let n2 = Number(document.getElementById('numero2').value)
 
-    vez = n1 * n2
-
-    const resultado = document.getElementById('resultado')
-    
-    resultado.innerHTML=" igual à "+vez
+function subtrair(n1,n2){
+    return Number(n1) - Number(n2)
 }
 
-function dividir(){
-    let n1 = Number(document.getElementById('numero1').value)
-    let n2 = Number(document.getElementById('numero2').value)
+function vezes(n1,n2){
+    return Number(n1) * Number(n2)
+}
 
-    divid = n1 / n2
-
-    const resultado = document.getElementById('resultado')
+function dividir(n1,n2){
+    if(n2 == 0 ){
+        console.error = 'Não é possível dividir por 0! '
+        return null
+    } else{
+        return Number(n1) / Number(n2)
+    }
     
-    resultado.innerHTML=" igual à "+divid
 }
